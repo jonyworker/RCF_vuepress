@@ -1,7 +1,7 @@
 module.exports = {
   title: "RCF 元件庫技術文件",
   description: "Just playing around",
-
+  base: "/RCF_vuepress/",
   // 設定頁面主題
   themeConfig: {
     displayAllHeaders: false,
@@ -12,28 +12,61 @@ module.exports = {
       "/component/": [
         // "" /* /foo/ */,
         {
-          title: "通用元件", // 必要的
+          title: "通用元件",
           collapsable: false, // 可选的, 默认值是 true,
           children: [
             {
-              title: "icon", // 必要的
-              path: "/component/utility/icon.md", // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+              title: "icon",
+              path: "/component/utility/icon.md",
               // 可选的, 默认值是 true,
             },
           ],
         },
         {
-          title: "表單元件", // 必要的
+          title: "表單元件",
           collapsable: false, // 可选的, 默认值是 true,
           children: [
+            // input
             {
-              title: "select", // 必要的
-              path: "/component/form/select.md", // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+              title: "select",
+              path: "/component/form/Select.md",
             },
             {
-              title: "TextFiled", // 必要的
-              path: "/component/form/textfiled.md", // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-              collapsable: true, // 可选的, 默认值是 true,
+              title: "Input Wrap",
+              path: "/component/form/InputWrap.md",
+            },
+            {
+              title: "Input Text",
+              path: "/component/form/InputText.md",
+            },
+            {
+              title: "Input Email",
+              path: "/component/form/InputEmail.md",
+            },
+            // check
+            {
+              title: "Checkbox 全選",
+              path: "/component/form/checkAll.md",
+            },
+            {
+              title: "checkbox",
+              path: "/component/form/checkbox.md",
+            },
+            {
+              title: "checkLimit",
+              path: "/component/form/checkLimit.md",
+            },
+            {
+              title: "radio button",
+              path: "/component/form/radiobutton.md",
+            },
+            {
+              title: "radio combo",
+              path: "/component/form/radioCombo.md",
+            },
+            {
+              title: "radio set",
+              path: "/component/form/radioSet.md",
             },
           ],
         },
@@ -45,6 +78,8 @@ module.exports = {
     nav: [
       { text: "指南", link: "/" },
       { text: "元件", link: "/component/" },
+
+      // 下拉式nav寫法
       // {
       //   text: "Languages",
       //   ariaLabel: "Language Menu",
@@ -84,8 +119,8 @@ module.exports = {
 //   "/",
 //   "/utility/",
 //   {
-//     title: "[ 表單元件 ]", // 必要的
-//     path: "/form/", // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+//     title: "[ 表單元件 ]",
+//     path: "/form/",
 //     collapsable: true, // 可选的, 默认值是 true,
 
 //     children: ["/form/select.md", "/form/textfiled.md"],
@@ -95,8 +130,8 @@ module.exports = {
 //  sidebarDepth: 1,
 //         children: [
 //           {
-//             title: "通用元件", // 必要的
-//             path: "/component/utility/", // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+//             title: "通用元件",
+//             path: "/component/utility/",
 //             collapsable: false, // 可选的, 默认值是 true,
 //             sidebarDepth: 3,
 //             children: [
@@ -112,8 +147,8 @@ module.exports = {
 //       },
 
 //       {
-//         title: "表單元件", // 必要的
-//         path: "/component/form/", // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+//         title: "表單元件",
+//         path: "/component/form/",
 //         collapsable: true, // 可选的, 默认值是 true,
 
 //         // children: [
